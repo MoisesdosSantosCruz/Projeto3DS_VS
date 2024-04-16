@@ -1,23 +1,41 @@
-﻿namespace Projeto3DS.Models
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Projeto3DS.Models
 {
+
+    [Table("Lanche")] // Criação de nome de tabela
     public class Lanche
     {
-        public string descrisaocurta { get; set; }
-        public string descrisaodetalhada { get; set; }
+        [StringLength(200, MinimumLength = 20)]
+        public string Descrisaocurta { get; set; }
+        public string Descrisaodetalhada { get; set; }
 
-        public int lancheid { get; set; }
-        public string nome { get; set; }
-        public decimal preco { get; set; }
+        public Boolean Emestoque { get; set; }
 
-        public string imagemULR { get; set; }
+        [Key] //Chave primária
+        public int Lancheid { get; set; }
 
-        public string lanchepreferido { get; set; }
+        [StringLength(80, MinimumLength = 10, ErrorMessage = "Tamanho inválido")] //StringLenght = Tamanho máximo, minimumlenght
+        [Required(ErrorMessage = "Por favor coloca o nome.")]                       
+        [Display(Name = "Nome do Lanche")] // Display = Mostrar
+        public string Nome { get; set; }
 
-        public string imagemiminiauta { get; set; }
+        [Range(1,999.99)] //Limite de preço
+        [Column(TypeName = "decimal(10,2)")] //Nome da coluna e os atributos
+        [Display(Name = "Preço")]
+        public decimal Preco { get; set; }
 
-        public int categoriaid {get; set;}
+        public string ImagemULR { get; set; }
 
-        public string categoria {get; set; }
+        public string Lanchepreferido { get; set; }
+
+        public string Imagemiminiauta { get; set; }
+
+        public int Categoriaid { get; set; }
+
+        public virtual Categoria Categoria { get; set;}
 
 
 

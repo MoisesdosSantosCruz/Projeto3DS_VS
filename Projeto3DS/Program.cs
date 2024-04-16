@@ -1,14 +1,17 @@
 
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
+using Projeto3DS.Controllers;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args); 
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<AppDbContext>(option =>
-option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); //Conecção com o banco de dados.
-
+builder.Services.AddDbContext<AppDbContext> (option =>
+option.UseMySQL("Server = localhost; User Id = root; Password = 12345678; Database = 'McLanches'" )); //Conexão com o banco de dados.
+                                                                                                      //builder.Configuration.("DefaultConnection"))) (Para SQL Server)
+                                      
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
