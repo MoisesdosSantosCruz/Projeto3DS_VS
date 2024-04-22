@@ -20,7 +20,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+<<<<<<< HEAD
     <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.0" />
+=======
+>>>>>>> bb4a8462de800b048633786314d726753607ea8f
   </ItemGroup>
 
 </Project>
