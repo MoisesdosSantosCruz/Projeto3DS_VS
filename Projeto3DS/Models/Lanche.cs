@@ -18,7 +18,7 @@ namespace Projeto3DS.Models
         public int Lancheid { get; set; }
 
         [StringLength(80, MinimumLength = 10, ErrorMessage = "Tamanho inválido")] //StringLenght = Tamanho máximo, minimumlenght
-        [Required(ErrorMessage = "Por favor coloca o nome.")]                       
+        [Required(ErrorMessage = "Por favor coloca o nome.")]   // Required = Obrigatório                    
         [Display(Name = "Nome do Lanche")] // Display = Mostrar
         public string Nome { get; set; }
 
