@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,18 +19,5 @@ namespace Projeto3DS.Models
         public List <Lanche> Lanche { get; set; }
 
 
-=======
-﻿namespace Projeto3DS.Models
-{
-    public class Categoria
-    {
-        public int categoriaid { get; set; }
-
-        public string categoria { get; set; }
-
-        public string descrisao {get; set;}
-
-        public string lanche { get; set; }
->>>>>>> bb4a8462de800b048633786314d726753607ea8f
     }
 }

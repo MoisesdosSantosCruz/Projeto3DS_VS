@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Projeto3DS.Models
 {
-<<<<<<< HEAD
 
     [Table("Lanche")] // Criação de nome de tabela
     public class Lanche
@@ -37,30 +36,6 @@ namespace Projeto3DS.Models
         public int Categoriaid { get; set; }
 
         public virtual Categoria Categoria { get; set;}
-=======
-   
-    [Table ("Lanche")]
-    public class Lanche
-    {
-        public string descrisaocurta { get; set; }
-        public string descrisaodetalhada { get; set; }
-        
-        [Key] //
-        public int lancheid { get; set;}
-
-        public string nome { get; set; }
-        public decimal preco { get; set; }
-
-        public string imagemULR { get; set; }
-
-        public string lanchepreferido { get; set; }
-
-        public string imagemiminiauta { get; set; }
-
-        public int categoriaid {get; set;}
-
-        public string categoria {get; set; }
->>>>>>> bb4a8462de800b048633786314d726753607ea8f
 
 
 
