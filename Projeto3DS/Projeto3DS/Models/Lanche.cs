@@ -9,7 +9,7 @@ namespace Projeto3DS.Models
     public class Lanche
     {
         [StringLength(200, MinimumLength = 20)]
-        public string Descrisaocurta { get; set; }
+        public string Descrisaocurta { get; set; } 
         public string Descrisaodetalhada { get; set; }
 
         public Boolean Emestoque { get; set; }
@@ -35,11 +35,17 @@ namespace Projeto3DS.Models
 
         public int Categoriaid { get; set; }
 
-        public virtual Categoria Categoria { get; set;}
+        public virtual Categoria Categoria { get; set; }
 
-
-
-
+        //Categoriaid 
+        //Descrisaocurta
+        //Emestoque
+        //descrisãoDetalhada
+        //ImagemURL
+        //Imagemiminiatura
+        //Lanchepreferido
+        //Nome
+        //Preco
 
 
 

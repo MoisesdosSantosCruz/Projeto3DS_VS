@@ -10,8 +10,12 @@ namespace Projeto3DS.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("insert into Categoria(CategoriaNome, Descrisao) " +
-                "values('Normal','Lanches feito com ingredientes normais')");
+            migrationBuilder.Sql("insert into Categoria(CategoriaNome, Descrisao) values('Normal','Lanches feito com ingredientes normais')");
+            // Adicionar as próximas categorias via MySql(direto na plataforma)
+
+
+
+
         }
 
         /// <inheritdoc />
